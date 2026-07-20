@@ -31,8 +31,8 @@ Then open `http://localhost:8080`.
 
 The lite application is generated from the full standalone Telecom MTO bundle. Unrelated dashboards, engineering manuals, workflows, diagrams, gland sizing, document references, and cloud-sync routes are excluded.
 
-- Full standalone size: 8.74 MB
-- Lite standalone size: 5.13 MB
-- Reduction: 41.3%
+- Full standalone size: 7.83 MiB
+- Lite standalone size: 3.91 MiB
+- Reduction: 50.0%
 
 All eight retained pages were browser-smoke-tested, including their embedded calculators and navigation routes.
