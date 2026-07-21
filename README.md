@@ -36,10 +36,10 @@ Then open `http://localhost:8080`.
 
 ## Build information
 
-The Lite application is generated from full-app commit `ae74fef` while retaining only the eight pages listed above. This release includes the categorized MTO ribbon, sticky placement, smooth Ctrl+wheel drawing zoom, bulk drawing registration, Clean Ghost Data, and corrected P2P elevation/tray-fill calculations. The Basic MTO manuals cover loading a PDF/image/DXF or session JSON, calibration, takeoff and metadata, saving, register review, and final exports.
+The Lite application is generated from full-app commit `1f78cf74` (merged full-app PR #11) while retaining only the eight pages listed above. This release includes the categorized MTO ribbon, sticky placement, smooth Ctrl+wheel drawing zoom, bulk drawing registration, Clean Ghost Data, and corrected P2P elevation/tray-fill calculations. The Basic MTO manuals cover loading a PDF/image/DXF or session JSON, calibration, takeoff and metadata, saving, register review, and final exports.
 
-- Full standalone size: 8.84 MB
-- Lite standalone size: 4.75 MB
-- Reduction: 46.3%
+- Full standalone size: 8.86 MB
+- Lite standalone size: 4.77 MB
+- Reduction: 46.2%
 
 All eight retained pages were browser-smoke-tested, including their embedded calculators and navigation routes.
