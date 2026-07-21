@@ -36,9 +36,9 @@ Then open `http://localhost:8080`.
 
 ## Build information
 
-The Lite application is generated from full-app commit `1f78cf74` (merged full-app PR #11) while retaining only the eight pages listed above. This release includes the categorized MTO ribbon, sticky placement, smooth Ctrl+wheel drawing zoom, bulk drawing registration, Clean Ghost Data, and corrected P2P elevation/tray-fill calculations. The Basic MTO manuals cover loading a PDF/image/DXF or session JSON, calibration, takeoff and metadata, saving, register review, and final exports.
+The Lite application is generated from full-app commit `ffdfb77` (merged full-app PR #12) while retaining only the eight pages listed above. In addition to the categorized MTO ribbon, sticky placement, smooth Ctrl+wheel drawing zoom, bulk drawing registration, Clean Ghost Data, and corrected P2P elevation/tray-fill calculations, this release makes native dropdown options readable and corrects canvas fit, centering, panning, and scroll bounds at every zoom level. The Basic MTO manuals cover loading a PDF/image/DXF or session JSON, calibration, takeoff and metadata, Fit to Screen and panning, saving, register review, and final exports.
 
-- Full standalone size: 8.86 MB
+- Full standalone size: 8.87 MB
 - Lite standalone size: 4.77 MB
 - Reduction: 46.2%
 
