@@ -2,6 +2,13 @@
 
 A stripped-down, single-file edition of the HEC Telecom Material Takeoff and BOQ application.
 
+## Available versions
+
+- `index.html` — legacy Lite release retained for compatibility.
+- [`Telecom_MTO_Lite_v2.html`](./Telecom_MTO_Lite_v2.html) — current Lite release with the advanced MTO workflow and expanded end-to-end manuals.
+
+Download the required HTML file and open it directly in a modern desktop browser. Use `Telecom_MTO_Lite_v2.html` for new work.
+
 ## Included pages
 
 - Material Takeoff (MTO)
