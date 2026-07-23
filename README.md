@@ -43,3 +43,16 @@ The Lite application is generated from full-app commit `bea1369` while retaining
 - Reduction: 46.2%
 
 All eight retained pages were browser-smoke-tested, including their embedded calculators and navigation routes.
+
+<!-- LITE_PROVENANCE_START -->
+## Full-to-Lite engine provenance
+
+- Full source revision: `cd8160237a5c950ccbb1a39cda11e8a752d6760e`
+- Full source file: `public/takeoff_tool.html`
+- Full source SHA-256: `cc3cc7c0abf9e758058db9530e0854edb5ec0d83d22ae9521ce3f073917fa80c`
+- Portable session schema: **2.4**
+- CAD export marker: `TELECOM_MTO_CAD_EXPORT_V1`
+- Generated artifacts: `Telecom_MTO_Lite_v2.html` and legacy `index.html`
+
+Run `node scripts/update_lite_engine.mjs --full-root=<path-to-telecom-material-takeoff-tool>` to deliberately synchronize the embedded MTO engine. The script fails if the Full V2.4 CAD contract is absent.
+<!-- LITE_PROVENANCE_END -->
