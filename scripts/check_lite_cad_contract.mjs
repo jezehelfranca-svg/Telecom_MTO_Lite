@@ -20,6 +20,20 @@ for (const name of artifacts) {
     if (html.includes('<script src="./vendor/jszip.min.js"></script>') || html.includes('<script src="./cad-placement-export.js"></script>')) {
         throw new Error(`${name} still relies on an external CAD-export dependency.`);
     }
-}
+
+    const doctype = html.indexOf('<!DOCTYPE html');
+    const start = doctype - 1;
+    if (doctype < 1 || html[start] !== String.fromCharCode(96)) throw new Error(`${name} has no readable embedded MTO engine.`);
+    let end = start + 1;
+    for (let escaped = false; end < html.length; end += 1) {
+        if (escaped) { escaped = false; continue; }
+        if (html[end] === '\\') { escaped = true; continue; }
+        if (html[end] === String.fromCharCode(96)) break;
+    }
+    const engine = Function('return ' + html.slice(start, end + 1))();
+    for (const [index, script] of [...engine.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)].entries()) {
+        try { new Function(script[1]); }
+        catch (error) { throw new Error(`${name} embedded script ${index} does not parse: ${error.message}`); }
+    }}
 
 console.log('Lite V2.4 CAD contract is present in both distributable artifacts.');

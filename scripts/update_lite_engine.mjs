@@ -62,7 +62,7 @@ function escapeTemplateLiteral(source) {
     return source
         .replace(/\\/g, '\\\\')
         .replace(/`/g, '\\`')
-        .replace(/\\$\\{/g, '\\${');
+        .replace(/\$\{/g, '\\${');
 }
 
 function replaceEmbeddedMto(artifact, embeddedMto) {
