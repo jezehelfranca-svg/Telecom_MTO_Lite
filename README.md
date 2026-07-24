@@ -36,23 +36,29 @@ Then open `http://localhost:8080`.
 
 ## Build information
 
-The Lite application is generated from full-app commit `bea1369` while retaining only the eight pages listed above. In addition to the categorized MTO ribbon, sticky placement, smooth Ctrl+wheel drawing zoom, bulk drawing registration, Clean Ghost Data, and corrected P2P elevation/tray-fill calculations, this release makes native dropdown options readable and corrects canvas fit, centering, panning, and scroll bounds at every zoom level. Imported SVG symbols now remain available when a browser workspace or project session is restored, reusable Material Configuration JSON includes its custom SVG definitions, and new items receive system-based tag prefixes such as SACS-001, PCCTV-001, PAGA-001, CT-001, DB-001, CDT-001, and PT-001. The Basic MTO manuals cover loading a PDF/image/DXF or session JSON, calibration, takeoff and metadata, Fit to Screen and panning, saving, register review, and final exports.
+The Lite application retains only the eight pages listed above. Its embedded MTO engine is byte-for-byte equivalent to the verified engine extracted from the corrected Full `dist/BOQ_Offline_App.html`, whose authoritative basis is commit `d2bd473`. The generator does not read `public/takeoff_tool.html`.
 
-- Full standalone size: 8.87 MB
-- Lite standalone size: 4.77 MB
-- Reduction: 46.2%
+The release includes the complete Basic MTO workflow, persistent imported SVG symbols, system-based tag prefixes, movable/resizable labels and callouts, CAD registration, symbol mapping, preflight validation, AC1027 DXF/audit export, explicit 3D vertical route segments, and the AutoCAD/ZWCAD import manual.
 
-All eight retained pages were browser-smoke-tested, including their embedded calculators and navigation routes.
+- Full standalone size: 8.67 MB
+- Lite standalone size: 4.78 MB
+- Reduction: 44.8%
+
+All eight retained pages and both downloadable HTML filenames are covered by the release contract and real-browser smoke test.
 
 <!-- LITE_PROVENANCE_START -->
 ## Full-to-Lite engine provenance
 
-- Full source revision: `cd8160237a5c950ccbb1a39cda11e8a752d6760e`
-- Full source file: `public/takeoff_tool.html`
-- Full source SHA-256: `cc3cc7c0abf9e758058db9530e0854edb5ec0d83d22ae9521ce3f073917fa80c`
+- Authoritative Full baseline: `d2bd4736fc8f3ef1640f5bab74daf745cfa5ae49`
+- Corrected Full PR commit: `e6969728802a3ac3f4346cdbf1064ee6f9891f7a`
+- Full source revision used: `e6969728802a3ac3f4346cdbf1064ee6f9891f7a`
+- Full source file: `dist/BOQ_Offline_App.html`
+- Full artifact normalized SHA-256: `e36a60eb0d4d9201641f48fbd4c011c114479e5a111a5d8964cb3e042b236410`
+- Embedded Full/Lite engine normalized SHA-256: `6f368cedcb661a4b1e45e9585895361cd902cedb8b66d213db5431a1eff0212a`
 - Portable session schema: **2.4**
 - CAD export marker: `TELECOM_MTO_CAD_EXPORT_V1`
+- Retained Lite pages: **8**
 - Generated artifacts: `Telecom_MTO_Lite_v2.html` and legacy `index.html`
 
-Run `node scripts/update_lite_engine.mjs --full-root=<path-to-telecom-material-takeoff-tool>` to deliberately synchronize the embedded MTO engine. The script fails if the Full V2.4 CAD contract is absent.
+Run `node scripts/build_lite_from_full_boq.mjs --full-root=<path-to-corrected-full-repository>` to deliberately synchronize the embedded MTO engine. The build fails unless the Full `dist/BOQ_Offline_App.html` and embedded engine match the recorded correction hashes.
 <!-- LITE_PROVENANCE_END -->
